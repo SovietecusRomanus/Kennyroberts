@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KennyRoberts Veggies</title>
+
+  <link rel="stylesheet" href="Kennyrobstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script src="Kennyrob.js"></script>
+</head>
+<body>
+
+<!--Navbar-->
+<nav>
+  <img class="logo" src="KennyLogo/Kennyrob.png.png" alt="KennyRoberts Logo">
+  <ul>
+    <li><a href="#" data-page="home">Home</a></li>
+    <li><a href="#" onclick="goToShop()">Shop us</a></li>
+    <li><a href="#" data-page="toship-page" onclick="renderToShipPage()">To Ship</a></li>
+    <li><a href="#" data-page="contact-page">Contact</a></li>
+    <li><a href="#" data-page="about">About</a></li>
+  </ul>
+</nav>
+
+<!--Vegetable-Section h1-->
+<section id="home" class="page active">
+
+  <div class="Vegetable-Section">
+    <h1>Local Produced Veggies</h1>
+    <div class="Vege-btn">
+      <button onclick="goToShop()">Shop now</button>
+    </div>
+  </div>
+
+  <!--Shop-Section h2-->
+  <h2 id="section-Categories" class="section-Categories">Shop by Categories</h2>
+
+  <!--Productbox-Section h2-->
+  <section class="Flashcard">
+    <h2>Flash Deal :- Lowest Price Guaranteed</h2>
+
+    <div class="Product-Row">
+      <div class="Product-card">
+        <img src="V-image/Eggplant.png" alt="Eggplant">
+        <h4>Eggplant</h4>
+        <p class="price">5php</p>
+        <small>1 Kg</small>
+        <button onclick="addToCart('Eggplant', '5php')">+ ADD</button>
+      </div>
+
+      <div class="Product-card">
+        <img src="V-image/Green chilli.png" alt="Green chilli">
+        <h4>Green chilli</h4>
+        <p class="price">5php</p>
+        <small>1 Kg</small>
+        <button onclick="addToCart('Green chilli', '5php')">+ ADD</button>
+      </div>
+
+      <div class="Product-card">
+        <img src="V-image/Greenbeans.png" alt="Greenbeans">
+        <h4>Greenbeans</h4>
+        <p class="price">25php</p>
+        <small>1 Kg</small>
+        <button onclick="addToCart('Greenbeans', '25php')">+ ADD</button>
+      </div>
+
+      <div class="Product-card">
+        <img src="V-image/Okra.png" alt="Okra">
+        <h4>Okra</h4>
+        <p class="price">5php</p>
+        <small>1 Kg</small>
+        <button onclick="addToCart('Okra', '5php')">+ ADD</button>
+      </div>
+
+      <div class="Product-card">
+        <img src="V-image/Petchay.png" alt="Petchay">
+        <h4>Petchay</h4>
+        <p class="price">25php</p>
+        <small>1 Kg</small>
+        <button onclick="addToCart('Petchay', '25php')">+ ADD</button>
+      </div>
+
+      <div class="Product-card">
+        <img src="V-image/Red chilli.png" alt="Red chilli">
+        <h4>Red chilli</h4>
+        <p class="price">25php</p>
+        <small>1 Kg</small>
+        <button onclick="addToCart('Red chilli', '25php')">+ ADD</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART BOX -->
+  <div class="cart-box">
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <h3>Total: ₱<span id="cart-total">0</span></h3>
+
+    <input type="text" id="customer-name" placeholder="Enter your name to order">
+    <button id="checkout-btn" onclick="checkoutOrder()" disabled>Place Order</button>
+  </div>
+
+  <!--Shop-Section Why us h2-->
+  <h2 id="section-Why" class="section-Why">Why us</h2>
+  <section class="why-choose-us">
+    <div class="features">
+      <div class="feature"><img src="V-image/Eggplant.png" alt="Locally Sourced"><p>Locally Sourced</p></div>
+      <div class="feature"><img src="V-image/Okra.png" alt="Harvested Daily"><p>Harvested Daily</p></div>
+      <div class="feature"><img src="V-image/Petchay.png" alt="Same-Day Delivery"><p>Same-Day Delivery</p></div>
+      <div class="feature"><img src="V-image/Tomatoe.png" alt="Fair Local Prices"><p>Fair Local Prices</p></div>
+    </div>
+  </section>
+
+  <!--Shop-Section Coming Soon h2-->
+  <h2 class="section-Categories2">Coming Soon</h2>
+  <section class="Flashcard2">
+    <div class="Product-Row2">
+      <div class="Product-card"><img src="V-image/Mani.png" alt="Mani"><h4>Mani</h4><p class="price">55php</p><button>+ ADD</button></div>
+      <div class="Product-card"><img src="V-image/Watermelon.png" alt="Watermelon"><h4>Watermelon</h4><p class="price">55php</p><button>+ ADD</button></div>
+      <div class="Product-card"><img src="V-image/Kalamansi.png" alt="Kalamansi"><h4>Kalamansi</h4><p class="price">55php</p><button>+ ADD</button></div>
+      <div class="Product-card"><img src="V-image/Langka.png" alt="Langka"><h4>Langka</h4><p class="price">55php</p><button>+ ADD</button></div>
+    </div>
+  </section>
+
+</section>
+<!-- ================= END HOME ================= -->
+
+<!-- ================= TO SHIP PAGE (LAZADA STYLE) ================= -->
+<div id="toship-page" class="page">
+  <div class="cart-box" style="max-width: 700px; text-align: left;">
+    <h2 style="color: #0b6b3a; text-align: center; border-bottom: 2px solid #0b6b3a; padding-bottom: 8px; margin-bottom: 15px;">
+      <i class="fa-solid fa-box"></i> My Purchases ("To Ship")
+    </h2>
+    <p style="text-align: center; color: #555; margin-bottom: 20px;">Here are the items you have ordered that are currently being prepared for shipment:</p>
+    
+    <div id="toship-container">
+      <!-- Dynamic orders will load here cleanly -->
+    </div>
+
+    <button onclick="goToShop()" style="margin-top: 20px; background: #0b6b3a; color: white; padding: 12px; border: none; border-radius: 6px; width: 100%; cursor: pointer; font-weight: bold;">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- ================= CONTACT PAGE ================= -->
+<div id="contact-page" class="page">
+  <div class="Contact-form">
+    <h2>Contact</h2>
+    <form id="myForm">
+      <div class="input-group">
+        <div><input type="text" name="Name" placeholder="Enter your name" class="name" required></div><br>
+        <div><input type="email" name="Email" placeholder="Enter your email" class="name" required></div><br>
+        <div><input type="text" id="Subject" name="Subject" placeholder="Subject" class="name"></div><br>
+        <div><textarea name="Message" placeholder="Enter your message" class="name2" required></textarea></div><br>
+
+        <div><input type="reset" class="bttn"></div><br>
+        <div><input type="submit" id="submit-button" value="Submit" class="bttn"></div>
+      </div>
+      <div id="message" style="display:none; font-weight:bold; margin-top:10px;"></div>
+    </form>
+  </div>
+
+  <section id="contact">
+    <h1>Contact Information</h1>
+    <p><i class="fa-solid fa-location-dot fa-fw"></i> Purok dos Del carmen</p>
+    <p><i class="fa-solid fa-envelope fa-fw"></i> Email: hege@example.com</p>
+    <p><i class="fa-solid fa-phone fa-fw"></i> Phone: 09123456789</p>
+    <p><i class="fab fa-facebook-f fa-fw"></i></p>
+  </section>
+
+  <div class="Contact-in">
+    <div class="Contact-map">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15420.26575278611!2d120.5579555!3d14.933391450000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33965e6dadcddf45%3A0x29c75a98e1991d62!2sDel%20Carmen%2C%20Lubao%2C%20Pampanga!5e0!3m2!1sen!2sph!4v1773319670738!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="Storage">
+    <div class="Item-1">
+      <h2>Visit Our Farm</h2>
+      <p>Come visit our farm and see where your fresh local produce is grown!</p>
+      <p>We are open daily from 7 AM to 6 PM.</p>
+      <a href="#" target="_blank" class="directions-btn">Get Directions</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABOUT PAGE ================= -->
+<section id="about" class="page">
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <p class="breadcrumb">Home > About Us</p>
+    </div>
+  </header>
+
+  <section class="middle-section">
+    <div class="welcome-text">
+      <h2>Welcome to VeggieStore!</h2>
+      <p>At VeggieStore, we're passionate about bringing the freshest, locally-sourced produce straight from our farm to your table.</p>
+    </div>
+
+    <div class="features-row">
+      <div class="column">
+        <img src="V-image/Watermelon.png" alt="Fresh">
+        <h3>Fresh & Natural</h3>
+        <p>Our vegetables are grown without harmful chemicals.</p>
+      </div>
+
+      <div class="column">
+        <img src="V-image/Mani.png" alt="Local">
+        <h3>Locally Grown</h3>
+        <p>We source our produce directly from our own farm.</p>
+      </div>
+
+      <div class="column">
+        <img src="V-image/Kalamansi.png" alt="Delivery">
+        <h3>Delivered Daily</h3>
+        <p>We're committed to same-day delivery right to your doorstep.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-section">
+    <div class="bottom-content">
+      <h2>About Us</h2>
+      <p>At VeggieStore, we're passionate about bringing the freshest produce straight to your table.</p>
+      <a href="#" class="directions-btn">Get Directions</a>
+    </div>
+  </section>
+</section>
+
+</body>
+</html>
