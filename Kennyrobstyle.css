@@ -38,12 +38,12 @@ body::after {
 
 body::before {
   left: -20px;
-  background-image: url("Border-vege/Bordervege.png");
+  background-image: url("Bordervege.png");
 }
 
 body::after {
   right: -20px;
-  background-image: url("Border-vege/Bordervege2.png");
+  background-image: url("Bordervege2.png");
 }
 
 /* NAVBAR */
