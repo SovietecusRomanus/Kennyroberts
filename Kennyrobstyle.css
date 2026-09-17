@@ -533,4 +533,65 @@ footer a {
   background-position: center;
   height: 600px;
   display: flex;
-  align-items: center
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.breadcrumb {
+  color: black;
+}
+
+.middle-section {
+  background-color: #fdfbf7;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.welcome-text {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.features-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 30%;
+  padding: 0 20px;
+}
+
+.column:nth-child(1), .column:nth-child(2) {
+  border-right: 1px solid #d3cabc;
+}
+
+.column img {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.bottom-section {
+  background-image: url('your-farm-path.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bottom-content {
+  width: 350px;
+  background-color: rgba(253, 251, 247, 0.6);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+
+
+
