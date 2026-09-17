@@ -38,13 +38,13 @@ body::after {
 
 body::before {
   left: -20px;
-  /* FIXED PATH: Removed folder 'Border-vege/' */
+  /* --- FIXED PATH: Removed 'Border-vege/' --- */
   background-image: url("Bordervege.png");
 }
 
 body::after {
   right: -20px;
-  /* FIXED PATH: Removed folder 'Border-vege/' */
+  /* --- FIXED PATH: Removed 'Border-vege/' --- */
   background-image: url("Bordervege2.png");
 }
 
@@ -103,9 +103,8 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  /* --- FIXED: Updated filename to match 'FreshVege.jpg' exactly --- */
+  /* --- FIXED PATH: Removed 'Images/' --- */
   background-image: url("FreshVege.jpg");
-  /* --------------------------------------------------------------- */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -527,13 +526,10 @@ footer a {
 
 /* ABOUT PAGE */
 .hero-section {
-  /* FIXED PATH: Removed folder 'Images/' */
+  /* --- FIXED PATH: Removed 'Images/' --- */
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("FreshVege.jpg");
   background-size: cover;
   background-position: center;
   height: 600px;
   display: flex;
-  align-
-    height: 250px;
-  }
-}
+  align-items: center
