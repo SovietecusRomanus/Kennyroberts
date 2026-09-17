@@ -545,6 +545,10 @@ footer a {
   color: black;
 }
 
+.hero-content {
+  margin-left: 50px; /* Adjust this value to shift it more or less */
+}
+
 .middle-section {
   background-color: #fdfbf7;
   padding: 60px 10%;
