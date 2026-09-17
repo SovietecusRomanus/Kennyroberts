@@ -532,9 +532,7 @@ footer a {
   background-position: center;
   height: 600px;
   display: flex;
-  align-items: center;
-  padding-left: 10%;  
-  color: white;        
+  align-items: center;       
 }
 
 .hero-content h1 {
