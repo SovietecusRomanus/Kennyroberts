@@ -592,6 +592,158 @@ left: 60px;
   border-radius: 8px;
 }
 
+/* ==========================================
+   MOBILE RESPONSIVE OVERRIDES (Screen width <= 768px)
+   Only active on mobile; PC/Laptops ignore this completely 
+   and use your exact original desktop definitions above.
+   ========================================== */
+@media screen and (max-width: 768px) {
 
+  /* Navigation */
+  nav {
+    height: auto;
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .logo {
+    height: 60px;
+    margin: 0 0 10px 0;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 8px;
+  }
+
+  /* Hero Section */
+  .Vegetable-Section {
+    min-height: 40vh;
+    padding-left: 15px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Vegetable-Section h1 {
+    font-size: 32px;
+    left: 0;
+  }
+
+  .Vege-btn {
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 20px;
+  }
+
+  .Vege-btn button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* Products Grid */
+  .Flashcard, .Flashcard2 {
+    padding: 20px 10px;
+  }
+
+  .Product-Row, .Product-Row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .Product-card {
+    width: 45%;
+    min-width: 140px;
+    height: auto;
+    padding: 15px;
+  }
+
+  /* Features & Why Us */
+  .features {
+    gap: 20px;
+  }
+
+  .feature {
+    max-width: 45%;
+  }
+
+  /* Contact Page Layout Fixes */
+  .Contact-form {
+    float: none;
+    width: 90%;
+    margin: 20px auto;
+    transform: none;
+  }
+
+  #contact {
+    float: none;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  #contact p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .Contact-in {
+    float: none;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .Storage {
+    width: 90%;
+    margin: 20px auto;
+    padding-top: 0;
+  }
+
+  .Item-1 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .Item-1 h2, .Item-1 p, .directions-btn {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  /* About Page Layout Fixes */
+  .features-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .column:nth-child(1), .column:nth-child(2) {
+    border-right: none;
+    border-bottom: 1px solid #d3cabc;
+    padding-bottom: 20px;
+  }
+
+  .bottom-section {
+    justify-content: center;
+    padding: 40px 5%;
+  }
+
+  .bottom-content {
+    width: 100%;
+  }
+
+  /* Background decorative corners cleanup on mobile */
+  body::before, body::after {
+    width: 250px;
+    height: 250px;
+  }
+}
 
 
